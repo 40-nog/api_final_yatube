@@ -32,9 +32,6 @@ class Post(models.Model):
         return self.text
 
 
-
-
-
 class Comment(models.Model):
     author = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name='comments')

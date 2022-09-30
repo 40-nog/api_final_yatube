@@ -11,7 +11,6 @@ class PostSerializer(serializers.ModelSerializer):
     class Meta:
         model = Post
         fields = '__all__'
-        
 
 
 class CommentSerializer(serializers.ModelSerializer):
@@ -32,9 +31,7 @@ class GroupSerializer(serializers.ModelSerializer):
     class Meta:
         model = Group
         fields = ('title', 'slug', 'description', 'author')
-
-        
-
+ 
 
 class FollowSerializer(serializers.ModelSerializer):
     user = serializers.SlugRelatedField(
@@ -50,10 +47,10 @@ class FollowSerializer(serializers.ModelSerializer):
         fields = '__all__'
         validators = [
                 serializers.UniqueTogetherValidator(
-                queryset=Follow.objects.all(),
-                fields=('user', 'following'),
-                message=('Вы уже подписаны на этого автора!')
-            ),
+                    queryset=Follow.objects.all(),
+                    fields=('user', 'following'),
+                    message=('Вы уже подписаны на этого автора!')
+                ),
         ]
 
     def validate(self, data):
