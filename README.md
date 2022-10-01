@@ -33,3 +33,15 @@
 ```DELETE /api/v1/posts/{id}/```
 - Получение всех комментариев к публикации:
 ```GET /api/v1/posts/{post_id}/comments/```
+
+## Технологии
+
+- Python 3.7
+- Django 2.2
+- Django REST Framework
+- JWT
+- Djoser
+
+
+### Автор
+Наташа Сорокина =)
